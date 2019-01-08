@@ -3,26 +3,17 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   Image,
-  List,
-  ListItem,
-  Notes,
-  Quote,
   Slide,
-  Text
+  Text,
+  Layout,
+  Link
 } from 'spectacle';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
-
-const images = {
-  formidagon: require('../assets/formidable-logo.svg'),
-  goodWork: require('../assets/good-work.gif')
-};
 
 // Require CSS
 require('normalize.css');
@@ -48,60 +39,72 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+        <Slide transition={['fade']} bgColor="secondary">
+          <Heading size={1} fit caps lineHeight={1} textColor="quaternary">
+            Apollo + React
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" fit bold>
-            open the presentation/index.js file to get started
+            GraphQL made easy
           </Text>
         </Slide>
-        <Slide bgColor="secondary">
-          <Image src={images.formidagon} width={800} />
+        <Slide transition={['fade']} bgColor="secondary">
+          <Layout style={{
+            display: 'flex',
+            flexDirection: 'row'
+          }}
+          >
+            <Image src="https://avatars0.githubusercontent.com/u/44933973?s=460&v=4" width={400} height={400} />
+            <Layout style={{
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+            >
+              <Text textColor="quaternary" style={{ padding: 20 }}>LFSCamargo</Text>
+              <Text textColor="tertiary" style={{ padding: 20 }}>@LXSLuizinho</Text>
+              <Text textColor="quaternary" style={{ padding: 20 }}>Remote software engineer at Popstand Inc.</Text>
+            </Layout>
+          </Layout>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Layout style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+          >
+            <Image src="https://cdn-images-1.medium.com/max/1600/1*AeQPXrmgIPn-ceHj-WVKDA.png" style={{ marginBottom: 10 }} height={400} />
+            <Heading size={3} textColor="tertiary">What's Our Challenge</Heading>
+            <Text textColor="quaternary" style={{ padding: 20 }}>Make a simple app explaining the Apollo Client (Mutations and Queries) + React Native + Types</Text>
+          </Layout>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Layout style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+          >
+            <Heading size={3} textColor="tertiary">Let's code!</Heading>
+          </Layout>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite margin="10px 0 0 30px">Author</Cite>
-          </BlockQuote>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Layout style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+          >
+            <Heading size={3} textColor="tertiary">Some Important Links</Heading>
+            <Link href="https://www.apollographql.com/docs/react/" textColor="quaternary">Apollo Client React Documentation</Link>
+            <Link href="https://www.typescriptlang.org/docs/home.html" textColor="quaternary">Typescript Docs</Link>
+            <Link href="https://facebook.github.io/react-native/docs/getting-started.html" textColor="quaternary">React Native</Link>
+          </Layout>
         </Slide>
-        <Slide>
-          <Image src={images.goodWork} width={500} />
-          <Notes>gifs work too</Notes>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Layout style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+          >
+            <Heading textColor="tertiary">Thanks Everyone!</Heading>
+          </Layout>
         </Slide>
       </Deck>
     );
