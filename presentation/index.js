@@ -73,7 +73,18 @@ export default class Presentation extends React.Component {
           >
             <Image src="https://cdn-images-1.medium.com/max/1600/1*AeQPXrmgIPn-ceHj-WVKDA.png" style={{ marginBottom: 10 }} height={400} />
             <Heading size={3} textColor="tertiary">What's Our Challenge</Heading>
-            <Text textColor="quaternary" style={{ padding: 20 }}>Make a simple app explaining the Apollo Client (Mutations and Queries) + React Native + Types</Text>
+            <Text textColor="quaternary" style={{ padding: 20 }}>Make a simple app explaining the Apollo Client (Mutations, Queries and Subscriptions) + React + Types</Text>
+          </Layout>
+        </Slide>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Layout style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+          >
+            <Image src="https://camo.githubusercontent.com/c44590d1c0e7b82e74487e4ee90ce35883deb071/68747470733a2f2f692e696d6775722e636f6d2f396e6d617175502e706e67" style={{ marginBottom: 10 }} height={400} />
+            <Heading size={3} textColor="tertiary">Twitter Clone</Heading>
+            <Text textColor="quaternary" style={{ padding: 20 }}>Lets build a simple twitter app using my Twitter Clone GraphQL Backend made using node.js</Text>
           </Layout>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary">
